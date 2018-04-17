@@ -40,4 +40,4 @@ app.get('/', function (req, res) {
   res.send("I am Mailer! Give me 3000 point then i will send your email.");
 });
 
-app.listen(3000, () => console.log('Mailer listen on port 3000!'));
+app.listen(process.env.PORT || 8080, () => console.log('Mailer is running!'));
