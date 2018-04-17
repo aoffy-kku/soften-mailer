@@ -1,0 +1,28 @@
+{
+  "name": "soften-mailer",
+  "version": "1.0.0",
+  "description": "This is mailer with nodejs",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "nodemailer": "^4.6.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aoffy-kku/soften-mailer.git"
+  },
+  "keywords": [
+    "Mailer"
+  ],
+  "author": "aoffy-kku",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aoffy-kku/soften-mailer/issues"
+  },
+  "homepage": "https://github.com/aoffy-kku/soften-mailer#readme"
+}
