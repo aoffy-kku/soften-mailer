@@ -127,37 +127,7 @@ app.get('/registersuccess', function (req, res) {
 });
 
 app.get('/', function (req, res) {
-  const data = req.query;
-  // create reusable transporter object using the default SMTP transport
-  const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: 'mailer.nmb@gmail.com',
-      pass: '$uper$ecret'
-    }
-  });
-
-  // setup email data with unicode symbols
-  const mailOptions = {
-    from: '"no-replay" <mailer.nmb@gmail.com>', // sender address
-    to:  data.receiver, // list of receivers
-    subject: `การสมัครสมาชิกล้มเหลว`, // Subject line
-    text: `บัญชีของคุณถูกถูกตรวจสอบว่ามีข้อมูลไม่ถูกต้อง ซ้ำ หรือถูกแอบอ้าง กรุณาติดต่อผู้ดูแลระบบ`, // plain text body
-    html: `<b>บัญชีของคุณถูกถูกตรวจสอบว่ามีข้อมูลไม่ถูกต้อง ซ้ำ หรือถูกแอบอ้าง กรุณาติดต่อผู้ดูแลระบบ</b>` // html body
-  };
-
-  transporter.sendMail(mailOptions, function (err, info) {
-    if (err)
-      console.log(err);
-    else
-      console.log(info);
-  });
-  console.log(req);
-  res.send('Reseted');
-});
-
-app.get('/', function (req, res) {
-  res.send("I am Mailer! Give me 3000 point then i will send your email.");
+  res.send("ระบบส่งอีเมลของ No More Bug powered by nodemailer");
 });
 
 app.listen(process.env.PORT || 8080, () => console.log('Mailer is running!'));
